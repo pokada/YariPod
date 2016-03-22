@@ -28,21 +28,20 @@ public class UserDirectoryController {
         StringBuilder userCurrentPath = new StringBuilder();
         userCurrentPath.append(path);
         userCurrentPath.append(username);
-        File dir = new File(new String(userCurrentPath));
+        File dir = new File(userCurrentPath.toString());
 
         userDirectoryDisplay.setText("a");
         //ObservableList<String> items =FXCollections.observableArrayList ("Single", "Double", "Suite", "Family App");
         ObservableList<String> items =FXCollections.observableArrayList();
 
         File[] files = dir.listFiles();
-        for (int i = 0; i < files.length; i++) {
-            File file = files[i];
-            if (files[i].isFile() && !files[i].isHidden()){
+        for(File file : files) {
+            if (file.isFile() && !file.isHidden()){
                 // file name
                 System.out.println(file);
                 String fileName = String.valueOf(file).replace(new String(userCurrentPath + "/"), "");
                 items.add(fileName);
-            }else if (files[i].isDirectory() && !files[i].isHidden()){
+            }else if (file.isDirectory() && !file.isHidden()){
                 // directory name
                 System.out.println(file);
                 String directoryName = String.valueOf(file).replace(new String(userCurrentPath + "/"), "");
