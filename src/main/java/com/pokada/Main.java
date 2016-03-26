@@ -25,7 +25,6 @@ public class Main extends Application {
         AnchorPane root = FXMLLoader.load(getClass().getClassLoader().getResource("firstView.fxml"));
         Scene scene = new Scene(root);
         primaryStage.setScene(scene);
-        
         // display window
         primaryStage.show();
     }
