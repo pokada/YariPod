@@ -1,2 +1,4 @@
 # IDE file
-.idea/
+/.idea
+/src/main/resources/properties/credentials.properties
+/target

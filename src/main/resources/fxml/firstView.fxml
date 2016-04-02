@@ -16,5 +16,11 @@
         <Button prefWidth="60.0" text="OK" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="8.0" />
       <Label layoutX="35.0" layoutY="14.0" prefHeight="27.0" prefWidth="259.0" text="current user directory" />
       <ListView fx:id="userDirectoryList" layoutX="35.0" layoutY="50.0" prefHeight="317.0" prefWidth="243.0" />
+      <TableView fx:id="remoteFileTable" layoutX="305.0" layoutY="50.0" prefHeight="317.0" prefWidth="283.0">
+        <columns>
+          <TableColumn fx:id="remoteFileName" prefWidth="75.0" text="name" />
+          <TableColumn fx:id="remoteFileSize" prefWidth="75.0" text="size" />
+        </columns>
+      </TableView>
     </children>
 </AnchorPane>
